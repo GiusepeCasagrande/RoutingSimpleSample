@@ -20,8 +20,8 @@ namespace RoutingSimpleSample.Views
 
             this.WhenActivated(disposables =>
             {
-                this.OneWayBind(ViewModel, x => x.Icon, x => x.PageIcon).DisposeWith(SubscriptionDisposables);
-                this.OneWayBind(ViewModel, x => x.Name, x => x.PageName).DisposeWith(SubscriptionDisposables);
+                this.OneWayBind(ViewModel, x => x.Icon, x => x.PageIcon.Text).DisposeWith(SubscriptionDisposables);
+                this.OneWayBind(ViewModel, x => x.Name, x => x.PageName.Text).DisposeWith(SubscriptionDisposables);
             });
         }
     }

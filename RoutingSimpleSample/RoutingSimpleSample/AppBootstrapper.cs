@@ -15,7 +15,7 @@ namespace RoutingSimpleSample
         {
             Router = new RoutingState();
             Locator.CurrentMutable.RegisterConstant(this, typeof(IScreen));
-            Locator.CurrentMutable.Register(() => new MenuCellViewModel(), typeof(IViewFor<MenuCellViewModel>));
+            Locator.CurrentMutable.Register(() => new MenuCellView(), typeof(IViewFor<MenuCellViewModel>));
             Locator.CurrentMutable.Register(() => new MenuView(), typeof(IViewFor<MenuViewModel>));
             Locator.CurrentMutable.Register(() => new SamplePageView(), typeof(IViewFor<SamplePageViewModel>));
 
