@@ -1,5 +1,6 @@
 using System.Reactive.Disposables;
 using ReactiveUI;
+using RoutingSimpleSample.Utils;
 using RoutingSimpleSample.ViewModels;
 
 namespace RoutingSimpleSample.Views
