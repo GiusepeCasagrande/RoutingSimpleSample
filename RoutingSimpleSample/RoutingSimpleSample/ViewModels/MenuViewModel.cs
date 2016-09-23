@@ -61,7 +61,7 @@ namespace RoutingSimpleSample.ViewModels
 
         void LoadSelectedPage(MenuCellViewModel viewModel)
         {
-            HostScreen.Router.Navigate.Execute(new SamplePageViewModel(viewModel));        
+            HostScreen.Router.Navigate.Execute(new SamplePageViewModel(viewModel)).Subscribe();        
         }
     }
 }

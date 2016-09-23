@@ -6,7 +6,7 @@
 		xmlns:ui="clr-namespace:RoutingSimpleSample.Views;assembly=RoutingSimpleSample" 
 		xmlns:vms="clr-namespace:RoutingSimpleSample.ViewModels;assembly=RoutingSimpleSample" 
 		x:Class="RoutingSimpleSample.Views.MenuView">
-		<ListView x:Name="MenuList">
+		<ListView SeparatorVisibility="None" x:Name="MenuList">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 						<ui:MenuCellView ViewModel="{Binding .}"/>
