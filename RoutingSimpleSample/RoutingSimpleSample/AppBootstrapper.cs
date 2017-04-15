@@ -1,3 +1,4 @@
+using System;
 using ReactiveUI;
 using ReactiveUI.XamForms;
 using RoutingSimpleSample.ViewModels;
@@ -19,12 +20,11 @@ namespace RoutingSimpleSample
             Locator.CurrentMutable.Register(() => new MenuView(), typeof(IViewFor<MenuViewModel>));
             Locator.CurrentMutable.Register(() => new SamplePageView(), typeof(IViewFor<SamplePageViewModel>));
 
-            // TODO: navigating here ends up showing the view twice. Probably some whackiness in the iOS RoutedViewHost implementation
-            //this.router.NavigateAndReset.Execute(exerciseProgramsViewModelFactory());
-            //Router.Navigate.Execute(new ProductsViewModel(this));
-            //Router.NavigationStack.Add(new ProductsViewModel(this));
-            Router.NavigationStack.Add(new MenuViewModel(this));
-
+            this
+                .Router
+                .NavigateAndReset
+                .Execute(new MenuViewModel())
+                .Subscribe();
         }
 
         public Page CreateMainPage()
