@@ -1,6 +1,8 @@
 #Autosave files
 *~
 
+.droidres/
+
 #build
 [Oo]bj/
 [Bb]in/
